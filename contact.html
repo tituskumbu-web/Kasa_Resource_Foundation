@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Verdant Horizon Farms</title>
+  <meta name="description" content="Contact Verdant Horizon Farms — enquire about coffee, pig, fishery, or chicken supply. Phone +675 71283291 · Email tituskumbu@gmail.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a5c3a;
+      --primary-dark: #0f3d26;
+      --primary-light: #2d8a58;
+      --accent: #c4a35a;
+      --accent-soft: #e8d9a8;
+      --bg: #f7f5f0;
+      --bg-alt: #eef3eb;
+      --text: #1c2b22;
+      --text-muted: #5a6b60;
+      --white: #ffffff;
+      --card-shadow: 0 8px 30px rgba(26, 92, 58, 0.08);
+      --radius: 14px;
+      --transition: 0.3s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== HEADER / NAV ========== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26, 92, 58, 0.08);
+      transition: box-shadow var(--transition);
+    }
+
+    .header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background: var(--bg-alt);
+    }
+
+    .nav-cta {
+      margin-left: 12px;
+      background: var(--primary) !important;
+      color: white !important;
+      padding: 10px 20px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--primary-dark);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      padding: 140px 24px 70px;
+      background:
+        linear-gradient(135deg, rgba(15, 61, 38, 0.92) 0%, rgba(26, 92, 58, 0.85) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.2" fill="%23ffffff" opacity="0.06"/></pattern></defs><rect fill="%231a5c3a" width="1200" height="400"/><rect fill="url(%23p)" width="1200" height="400"/></svg>');
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 18px;
+    }
+
+    .breadcrumb a {
+      opacity: 0.9;
+      transition: opacity var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      font-size: 1.08rem;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+
+    /* ========== CONTACT SECTION ========== */
+    .contact-section {
+      padding: 80px 24px 100px;
+      background: var(--bg);
+    }
+
+    .contact-layout {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Contact info cards */
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .contact-info > p {
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-size: 0.98rem;
+    }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(26, 92, 58, 0.12);
+    }
+
+    .info-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      color: white;
+    }
+
+    .info-body h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .info-body p,
+    .info-body a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .info-body a {
+      color: var(--primary);
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .info-body a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    .divisions-quick {
+      margin-top: 32px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .divisions-quick h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+    }
+
+    .divisions-quick ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .divisions-quick a {
+      display: block;
+      padding: 10px 14px;
+      background: var(--bg-alt);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .divisions-quick a:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Contact form */
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .form-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-card > p {
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      font-size: 0.95rem;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid rgba(26, 92, 58, 0.15);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26, 92, 58, 0.12);
+      background: var(--white);
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 92, 58, 0.3);
+    }
+
+    .form-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d2a1c;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      max-width: 280px;
+      opacity: 0.75;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      transition: opacity var(--transition);
+    }
+
+    .footer-col a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        gap: 4px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 16px;
+      }
+
+      .nav-cta {
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .form-card {
+        padding: 28px 20px;
+      }
+
+      .divisions-quick ul {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        Verdant Horizon
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="division.html">Divisions</a></li>
+        <li><a href="coffee.html">Coffee</a></li>
+        <li><a href="pig.html">Pig</a></li>
+        <li><a href="fishery.html">Fishery</a></li>
+        <li><a href="chicken.html">Chicken</a></li>
+        <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; Contact
+      </div>
+      <h1>Contact Us</h1>
+      <p>Enquire about specialty coffee lots, livestock supply, aquaculture, or poultry. We respond promptly to volume, specification, and partnership requests.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-layout">
+
+      <!-- Left: Contact details -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Reach us by phone or email, or send a message using the form. Tell us which division you are interested in and we will connect you with the right team.</p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-icon">✉</div>
+            <div class="info-body">
+              <h3>Email</h3>
+              <p><a href="mailto:tituskumbu@gmail.com">tituskumbu@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">☎</div>
+            <div class="info-body">
+              <h3>Phone</h3>
+              <p><a href="tel:+67571283291">+675 71283291</a></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-body">
+              <h3>Location</h3>
+              <p>Agricultural Hub, Region<br>Papua New Guinea</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divisions-quick">
+          <h3>Explore Our Divisions</h3>
+          <ul>
+            <li><a href="coffee.html">☕ Coffee Farming</a></li>
+            <li><a href="pig.html">🐷 Pig Farming</a></li>
+            <li><a href="fishery.html">🐟 Fishery Farming</a></li>
+            <li><a href="chicken.html">🐔 Chicken Farming</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="form-card">
+        <h2>Send a Message</h2>
+        <p>Fill in the form below and we will get back to you as soon as possible.</p>
+        <form action="mailto:tituskumbu@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+675 ...">
+            </div>
+            <div class="form-group">
+              <label for="division">Division of Interest</label>
+              <select id="division" name="division">
+                <option value="">Select a division</option>
+                <option value="Coffee">Coffee Farming &amp; Harvesting</option>
+                <option value="Pig">Pig Farming</option>
+                <option value="Fishery">Fishery Farming</option>
+                <option value="Chicken">Chicken Farming</option>
+                <option value="General">General Enquiry</option>
+                <option value="Partnership">Partnership / Supply Contract</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" required placeholder="Brief subject line">
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Tell us about volumes, specifications, or how we can help..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">Or email us directly at <a href="mailto:tituskumbu@gmail.com" style="color:var(--primary);font-weight:500;">tituskumbu@gmail.com</a></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🌿</div>
+          Verdant Horizon
+        </a>
+        <p>A multi-sector agricultural enterprise committed to sustainable production across coffee, livestock, and aquaculture.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <ul>
+          <li><a href="coffee.html">Coffee Farming</a></li>
+          <li><a href="pig.html">Pig Farming</a></li>
+          <li><a href="fishery.html">Fishery Farming</a></li>
+          <li><a href="chicken.html">Chicken Farming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="division.html">Divisions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:tituskumbu@gmail.com">tituskumbu@gmail.com</a></li>
+          <li><a href="tel:+67571283291">+675 71283291</a></li>
+          <li>Agricultural Hub, Region</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Verdant Horizon Farms. All rights reserved.</span>
+      <span>Sustainable Agriculture · Quality Produce</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Farming & Harvesting | Verdant Horizon Farms</title>
+  <meta name="description" content="Specialty coffee farming and harvesting at Verdant Horizon Farms — highland arabica and robusta, selective hand-picking, controlled processing, and full lot traceability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a5c3a;
+      --primary-dark: #0f3d26;
+      --primary-light: #2d8a58;
+      --accent: #c4a35a;
+      --accent-soft: #e8d9a8;
+      --bg: #f7f5f0;
+      --bg-alt: #eef3eb;
+      --text: #1c2b22;
+      --text-muted: #5a6b60;
+      --white: #ffffff;
+      --card-shadow: 0 8px 30px rgba(26, 92, 58, 0.08);
+      --radius: 14px;
+      --transition: 0.3s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== HEADER / NAV ========== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26, 92, 58, 0.08);
+      transition: box-shadow var(--transition);
+    }
+
+    .header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background: var(--bg-alt);
+    }
+
+    .nav-cta {
+      margin-left: 12px;
+      background: var(--primary) !important;
+      color: white !important;
+      padding: 10px 20px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--primary-dark);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      padding: 140px 24px 70px;
+      background:
+        linear-gradient(135deg, rgba(44, 26, 18, 0.9) 0%, rgba(92, 61, 40, 0.85) 50%, rgba(26, 92, 58, 0.75) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.2" fill="%23ffffff" opacity="0.06"/></pattern></defs><rect fill="%235c3d28" width="1200" height="400"/><rect fill="url(%23p)" width="1200" height="400"/></svg>');
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 18px;
+    }
+
+    .breadcrumb a {
+      opacity: 0.9;
+      transition: opacity var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      font-size: 1.08rem;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+
+    /* ========== INTRO STRIP ========== */
+    .intro-strip {
+      max-width: 1180px;
+      margin: -36px auto 0;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .intro-item {
+      text-align: center;
+    }
+
+    .intro-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .intro-item .label {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-light);
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    /* ========== CONTENT SECTIONS ========== */
+    .content-section {
+      padding: 80px 24px;
+    }
+
+    .content-section:nth-of-type(odd) {
+      background: var(--white);
+    }
+
+    .content-section:nth-of-type(even) {
+      background: var(--bg-alt);
+    }
+
+    .content-layout {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .content-layout.reverse {
+      direction: rtl;
+    }
+
+    .content-layout.reverse > * {
+      direction: ltr;
+    }
+
+    .content-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.55rem, 2.8vw, 2rem);
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+    }
+
+    .content-text .lead {
+      font-size: 1.06rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .content-text p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+    }
+
+    .content-visual {
+      border-radius: var(--radius);
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: white;
+      font-size: 4.2rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .content-visual span {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .content-visual.coffee-main {
+      background: linear-gradient(160deg, #2c1a12 0%, #5c3d28 45%, #8b6540 100%);
+    }
+
+    .content-visual.coffee-process {
+      background: linear-gradient(160deg, #3d2b1f 0%, #6b4c35 50%, #9a7350 100%);
+    }
+
+    .content-visual.coffee-quality {
+      background: linear-gradient(160deg, #1a3d2a 0%, #2d5c40 50%, #4a8a60 100%);
+    }
+
+    /* Feature list */
+    .feature-list {
+      list-style: none;
+      margin: 20px 0 8px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 11px;
+      font-size: 0.94rem;
+      color: var(--text);
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Info cards grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid rgba(26, 92, 58, 0.08);
+      border-radius: 12px;
+      padding: 20px 18px;
+    }
+
+    .content-section:nth-of-type(even) .info-card {
+      background: var(--bg);
+    }
+
+    .info-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Process steps */
+    .process-section {
+      padding: 90px 24px;
+      background: var(--bg);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .process-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      position: relative;
+    }
+
+    .process-num {
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin: 0 auto 16px;
+    }
+
+    .process-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Standards / tags */
+    .standards-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .standard-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(26, 92, 58, 0.08);
+      color: var(--primary);
+      border: 1px solid rgba(26, 92, 58, 0.12);
+    }
+
+    /* Specs table-like */
+    .specs-section {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .specs-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .spec-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border: 1px solid rgba(26, 92, 58, 0.06);
+    }
+
+    .spec-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(26, 92, 58, 0.12);
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(26, 92, 58, 0.06);
+      font-size: 0.9rem;
+    }
+
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+
+    .spec-label {
+      color: var(--text-muted);
+    }
+
+    .spec-value {
+      font-weight: 600;
+      color: var(--text);
+      text-align: right;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      text-align: center;
+      padding: 90px 24px;
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      max-width: 500px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-soft);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 163, 90, 0.35);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d2a1c;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      max-width: 280px;
+      opacity: 0.75;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      transition: opacity var(--transition);
+    }
+
+    .footer-col a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px) {
+      .content-layout,
+      .content-layout.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 36px;
+      }
+
+      .content-visual {
+        height: 260px;
+        font-size: 3.2rem;
+        order: -1;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        gap: 4px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 16px;
+      }
+
+      .nav-cta {
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .intro-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 20px 14px;
+      }
+
+      .intro-item .num {
+        font-size: 1.45rem;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        Verdant Horizon
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="division.html">Divisions</a></li>
+        <li><a href="coffee.html" class="active">Coffee</a></li>
+        <li><a href="pig.html">Pig</a></li>
+        <li><a href="fishery.html">Fishery</a></li>
+        <li><a href="chicken.html">Chicken</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="division.html">Divisions</a> &nbsp;/&nbsp; Coffee
+      </div>
+      <h1>Coffee Farming &amp; Harvesting</h1>
+      <p>Specialty highland coffee grown, selectively harvested, and carefully processed for consistent cup quality and full lot traceability.</p>
+    </div>
+  </section>
+
+  <!-- INTRO METRICS -->
+  <div class="intro-strip">
+    <div class="intro-grid">
+      <div class="intro-item">
+        <div class="num">Arabica</div>
+        <div class="label">&amp; Robusta</div>
+      </div>
+      <div class="intro-item">
+        <div class="num">1,200m+</div>
+        <div class="label">Elevation Bands</div>
+      </div>
+      <div class="intro-item">
+        <div class="num">Hand</div>
+        <div class="label">Selective Picking</div>
+      </div>
+      <div class="intro-item">
+        <div class="num">100%</div>
+        <div class="label">Lot Traceability</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="content-section">
+    <div class="content-layout">
+      <div class="content-text">
+        <span class="section-eyebrow">Division 01 · Specialty Crop</span>
+        <h2>From Highlands to Export Lot</h2>
+        <p class="lead">Our coffee estates are positioned at elevations that support slow cherry maturation and complex flavour development. We combine traditional selective harvesting with modern agronomy and on-site processing control.</p>
+        <p>Both arabica and robusta cultivars are matched to altitude bands and microclimates. Shade and semi-shade systems protect soil structure, support biodiversity, and moderate temperature extremes. Every premium lot is built from cherries picked only at peak ripeness.</p>
+        <ul class="feature-list">
+          <li>Elevation-optimised cultivar placement</li>
+          <li>Shade-grown and agroforestry-integrated plantings</li>
+          <li>Selective hand-picking with multiple harvest passes</li>
+          <li>On-site wet mill and raised-bed drying infrastructure</li>
+          <li>Plot-to-lot traceability with cupping records</li>
+        </ul>
+        <div class="standards-row">
+          <span class="standard-tag">Selective Harvest</span>
+          <span class="standard-tag">Moisture Control</span>
+          <span class="standard-tag">Cup Quality</span>
+          <span class="standard-tag">Full Traceability</span>
+        </div>
+      </div>
+      <div class="content-visual coffee-main">
+        ☕
+        <span>Coffee Estates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTIVATION & HARVEST -->
+  <section class="content-section">
+    <div class="content-layout reverse">
+      <div class="content-text">
+        <span class="section-eyebrow">Agronomy &amp; Field Operations</span>
+        <h2>Cultivation &amp; Selective Harvesting</h2>
+        <p class="lead">Healthy trees and careful picking are the foundation of cup quality. We manage soil health, canopy, and pest pressure so that cherries reach full maturity under stable conditions.</p>
+        <p>Harvest teams make multiple passes through each block, collecting only ripe fruit. Underripe and overripe cherries are excluded from specialty lots. This discipline preserves flavour potential and reduces defects downstream.</p>
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Soil &amp; Nutrition</h4>
+            <p>Regular soil testing, organic matter programmes, and balanced nutrient applications tailored to elevation and cultivar.</p>
+          </div>
+          <div class="info-card">
+            <h4>Canopy Management</h4>
+            <p>Pruning and shade regulation to maintain light penetration, airflow, and sustainable yields.</p>
+          </div>
+          <div class="info-card">
+            <h4>Pest &amp; Disease</h4>
+            <p>Integrated monitoring and controls prioritising prevention and minimal environmental impact.</p>
+          </div>
+          <div class="info-card">
+            <h4>Harvest Discipline</h4>
+            <p>Hand selection of ripe cherries only; multiple passes per season for consistent maturity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-visual coffee-process">
+        🌿
+        <span>Field &amp; Harvest</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS STEPS -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Post-Harvest</span>
+        <h2>Processing Pathway</h2>
+        <p>Controlled steps from cherry to green bean protect quality and enable consistent, traceable lots for buyers.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">1</div>
+          <h3>Reception &amp; Sorting</h3>
+          <p>Cherries received, weighed, and sorted. Defective or mixed-maturity fruit is separated before processing.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">2</div>
+          <h3>Pulping &amp; Fermentation</h3>
+          <p>Wet processing with controlled fermentation times. Monitoring ensures clean mucilage removal without over-fermentation.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">3</div>
+          <h3>Washing &amp; Drying</h3>
+          <p>Thorough washing followed by raised-bed or patio drying. Moisture is tracked to target export levels.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">4</div>
+          <h3>Milling &amp; Grading</h3>
+          <p>Parchment hulling, density and size grading, and final quality checks before lot formation and storage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY & TRACEABILITY -->
+  <section class="content-section">
+    <div class="content-layout">
+      <div class="content-text">
+        <span class="section-eyebrow">Quality Assurance</span>
+        <h2>Cup Quality &amp; Lot Traceability</h2>
+        <p class="lead">Every export lot is supported by physical and sensory data. Buyers can link green bean quality back to estate, elevation band, and process method.</p>
+        <p>Cupping is performed on representative samples before release. Moisture, density, and defect scores are recorded. Lot codes connect field blocks, process batches, and shipment documentation for full supply-chain visibility.</p>
+        <ul class="feature-list">
+          <li>Plot-level harvest and process records</li>
+          <li>Moisture and physical quality monitoring</li>
+          <li>Pre-shipment cupping and sensory notes</li>
+          <li>Lot coding from estate through export</li>
+          <li>Documentation ready for commercial and specialty buyers</li>
+        </ul>
+      </div>
+      <div class="content-visual coffee-quality">
+        🔬
+        <span>Quality Control</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIFICATIONS -->
+  <section class="specs-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">At a Glance</span>
+        <h2>Operational Snapshot</h2>
+        <p>Key characteristics of our coffee production system.</p>
+      </div>
+      <div class="specs-grid">
+        <div class="spec-card">
+          <h3>Cultivation</h3>
+          <div class="spec-row">
+            <span class="spec-label">Species</span>
+            <span class="spec-value">Arabica &amp; Robusta</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Elevation</span>
+            <span class="spec-value">1,200m+ bands</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">System</span>
+            <span class="spec-value">Shade / semi-shade</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Harvest</span>
+            <span class="spec-value">Selective hand-pick</span>
+          </div>
+        </div>
+        <div class="spec-card">
+          <h3>Processing</h3>
+          <div class="spec-row">
+            <span class="spec-label">Methods</span>
+            <span class="spec-value">Wet &amp; dry</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Infrastructure</span>
+            <span class="spec-value">On-site wet mill</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Drying</span>
+            <span class="spec-value">Raised beds / patio</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Moisture target</span>
+            <span class="spec-value">Export-grade control</span>
+          </div>
+        </div>
+        <div class="spec-card">
+          <h3>Quality &amp; Supply</h3>
+          <div class="spec-row">
+            <span class="spec-label">Grading</span>
+            <span class="spec-value">Size, density, defects</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Cupping</span>
+            <span class="spec-value">Pre-shipment samples</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Traceability</span>
+            <span class="spec-value">Plot → export lot</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Buyers</span>
+            <span class="spec-value">Specialty &amp; commercial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Source Specialty Coffee Lots</h2>
+    <p>Request current availability, sample lots, or discuss volume contracts. Our team provides cupping notes, physical specs, and full lot documentation.</p>
+    <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🌿</div>
+          Verdant Horizon
+        </a>
+        <p>A multi-sector agricultural enterprise committed to sustainable production across coffee, livestock, and aquaculture.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <ul>
+          <li><a href="coffee.html">Coffee Farming</a></li>
+          <li><a href="pig.html">Pig Farming</a></li>
+          <li><a href="fishery.html">Fishery Farming</a></li>
+          <li><a href="chicken.html">Chicken Farming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="division.html">Divisions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@verdanthorizon.farm">hello@verdanthorizon.farm</a></li>
+          <li>+1 (555) 012-3456</li>
+          <li>Agricultural Hub, Region</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Verdant Horizon Farms. All rights reserved.</span>
+      <span>Sustainable Agriculture · Quality Produce</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>

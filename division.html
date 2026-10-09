@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Divisions | Verdant Horizon Farms</title>
+  <meta name="description" content="Explore Verdant Horizon Farms' four production divisions: Coffee Farming & Harvesting, Pig Farming, Fishery Farming, and Chicken Farming — detailed operations, standards, and capabilities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a5c3a;
+      --primary-dark: #0f3d26;
+      --primary-light: #2d8a58;
+      --accent: #c4a35a;
+      --accent-soft: #e8d9a8;
+      --bg: #f7f5f0;
+      --bg-alt: #eef3eb;
+      --text: #1c2b22;
+      --text-muted: #5a6b60;
+      --white: #ffffff;
+      --card-shadow: 0 8px 30px rgba(26, 92, 58, 0.08);
+      --radius: 14px;
+      --transition: 0.3s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== HEADER / NAV ========== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(26, 92, 58, 0.08);
+      transition: box-shadow var(--transition);
+    }
+
+    .header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background: var(--bg-alt);
+    }
+
+    .nav-cta {
+      margin-left: 12px;
+      background: var(--primary) !important;
+      color: white !important;
+      padding: 10px 20px !important;
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--primary-dark);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      padding: 140px 24px 70px;
+      background:
+        linear-gradient(135deg, rgba(15, 61, 38, 0.92) 0%, rgba(26, 92, 58, 0.82) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.2" fill="%23ffffff" opacity="0.06"/></pattern></defs><rect fill="%231a5c3a" width="1200" height="400"/><rect fill="url(%23p)" width="1200" height="400"/></svg>');
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 18px;
+    }
+
+    .breadcrumb a {
+      opacity: 0.9;
+      transition: opacity var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      font-size: 1.08rem;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+
+    /* ========== INTRO STRIP ========== */
+    .intro-strip {
+      max-width: 1180px;
+      margin: -36px auto 0;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .intro-item {
+      text-align: center;
+    }
+
+    .intro-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .intro-item .label {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-light);
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    /* ========== DIVISION BLOCKS ========== */
+    .division-block {
+      padding: 80px 24px;
+    }
+
+    .division-block:nth-of-type(odd) {
+      background: var(--white);
+    }
+
+    .division-block:nth-of-type(even) {
+      background: var(--bg-alt);
+    }
+
+    .division-layout {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .division-layout.reverse {
+      grid-template-columns: 1fr 340px;
+    }
+
+    .division-layout.reverse .division-side {
+      order: 2;
+    }
+
+    .division-visual {
+      border-radius: var(--radius);
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: white;
+      font-size: 4rem;
+      box-shadow: var(--card-shadow);
+      position: sticky;
+      top: 96px;
+    }
+
+    .division-visual span {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .division-visual.coffee { background: linear-gradient(160deg, #2c1a12 0%, #5c3d28 50%, #8b6540 100%); }
+    .division-visual.pig { background: linear-gradient(160deg, #3d251c 0%, #6b4030 50%, #9a5f48 100%); }
+    .division-visual.fishery { background: linear-gradient(160deg, #0f2a40 0%, #1e4d6e 50%, #2d7a9a 100%); }
+    .division-visual.chicken { background: linear-gradient(160deg, #3d3510 0%, #6b5c20 50%, #9a8a30 100%); }
+
+    .division-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      background: var(--bg-alt);
+      color: var(--primary);
+    }
+
+    .badge.accent {
+      background: rgba(196, 163, 90, 0.18);
+      color: #8a6e2f;
+    }
+
+    .division-main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+    }
+
+    .division-main .lead {
+      font-size: 1.08rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .division-main p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0 24px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid rgba(26, 92, 58, 0.08);
+      border-radius: 12px;
+      padding: 18px 16px;
+    }
+
+    .division-block:nth-of-type(even) .info-card {
+      background: var(--bg);
+    }
+
+    .info-card h4 {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .info-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 20px 0 24px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 11px;
+      font-size: 0.94rem;
+      color: var(--text);
+    }
+
+    .feature-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .standards-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .standard-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(26, 92, 58, 0.08);
+      color: var(--primary);
+      border: 1px solid rgba(26, 92, 58, 0.12);
+    }
+
+    .division-cta {
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26, 92, 58, 0.25);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid rgba(26, 92, 58, 0.3);
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--bg-alt);
+      border-color: var(--primary);
+    }
+
+    /* ========== CAPABILITY SECTION ========== */
+    .capability {
+      padding: 90px 24px;
+      background: var(--bg);
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .cap-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 26px;
+      box-shadow: var(--card-shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .cap-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(26, 92, 58, 0.1);
+    }
+
+    .cap-icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .cap-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .cap-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ========== CTA ========== */
+    .cta {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      text-align: center;
+      padding: 90px 24px;
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      max-width: 500px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+
+    .cta .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .cta .btn-primary:hover {
+      background: var(--accent-soft);
+      box-shadow: 0 8px 24px rgba(196, 163, 90, 0.35);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #0d2a1c;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      max-width: 280px;
+      opacity: 0.75;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      transition: opacity var(--transition);
+    }
+
+    .footer-col a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 980px) {
+      .division-layout,
+      .division-layout.reverse {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .division-layout.reverse .division-side {
+        order: 0;
+      }
+
+      .division-visual {
+        height: 240px;
+        position: static;
+        font-size: 3.2rem;
+      }
+
+      .capability-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        gap: 4px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 16px;
+      }
+
+      .nav-cta {
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .intro-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 20px 14px;
+      }
+
+      .intro-item .num {
+        font-size: 1.45rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        Verdant Horizon
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="division.html" class="active">Divisions</a></li>
+        <li><a href="coffee.html">Coffee</a></li>
+        <li><a href="pig.html">Pig</a></li>
+        <li><a href="fishery.html">Fishery</a></li>
+        <li><a href="chicken.html">Chicken</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; Divisions
+      </div>
+      <h1>Our Production Divisions</h1>
+      <p>Four integrated farming systems operating under unified standards of quality, animal welfare, environmental care, and full product traceability.</p>
+    </div>
+  </section>
+
+  <!-- INTRO METRICS -->
+  <div class="intro-strip">
+    <div class="intro-grid">
+      <div class="intro-item">
+        <div class="num">4</div>
+        <div class="label">Core Divisions</div>
+      </div>
+      <div class="intro-item">
+        <div class="num">1,200+</div>
+        <div class="label">Hectares Managed</div>
+      </div>
+      <div class="intro-item">
+        <div class="num">18 yrs</div>
+        <div class="label">Operational Experience</div>
+      </div>
+      <div class="intro-item">
+        <div class="num">100%</div>
+        <div class="label">Lot Traceability</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COFFEE DIVISION -->
+  <section class="division-block" id="coffee">
+    <div class="division-layout">
+      <div class="division-side">
+        <div class="division-visual coffee">
+          ☕
+          <span>Coffee Estates</span>
+        </div>
+      </div>
+      <div class="division-main">
+        <div class="division-meta">
+          <span class="badge">Division 01</span>
+          <span class="badge accent">Specialty Crop</span>
+        </div>
+        <h2>Coffee Farming &amp; Harvesting</h2>
+        <p class="lead">Highland coffee production focused on cup quality, selective harvesting, and controlled post-harvest processing for consistent specialty-grade lots.</p>
+        <p>Our estates are situated at elevations that favour slow cherry maturation and complex flavour development. We cultivate both arabica and robusta varieties under shade or semi-shade systems that support soil health and biodiversity. Harvest is performed by hand at peak ripeness only; overripe or underripe fruit is excluded from premium lots.</p>
+        <p>On-site wet mills and raised drying beds allow us to manage fermentation, washing, and drying with precision. Every lot is tagged from plot through parchment and green bean stages, enabling full traceability for buyers and exporters.</p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Cultivars &amp; Elevation</h4>
+            <p>Arabica and robusta selections matched to altitude bands for optimal cup profile and yield stability.</p>
+          </div>
+          <div class="info-card">
+            <h4>Harvest Method</h4>
+            <p>Selective hand-picking of ripe cherries; multiple passes per season to maintain quality consistency.</p>
+          </div>
+          <div class="info-card">
+            <h4>Processing</h4>
+            <p>Wet and dry processing options with controlled fermentation, parchment drying, and moisture monitoring.</p>
+          </div>
+          <div class="info-card">
+            <h4>Traceability</h4>
+            <p>Plot-level records linked to export lots; cupping notes and physical quality data retained for each shipment.</p>
+          </div>
+        </div>
+
+        <ul class="feature-list">
+          <li>Shade-grown and agroforestry-integrated plantings</li>
+          <li>Soil testing and organic matter management programs</li>
+          <li>Pest and disease monitoring with integrated controls</li>
+          <li>On-site wet mill capacity and raised-bed drying infrastructure</li>
+          <li>Quality grading and cupping before lot release</li>
+        </ul>
+
+        <div class="standards-row">
+          <span class="standard-tag">Selective Harvest</span>
+          <span class="standard-tag">Lot Traceability</span>
+          <span class="standard-tag">Moisture Control</span>
+          <span class="standard-tag">Cup Quality Focus</span>
+        </div>
+
+        <div class="division-cta">
+          <a href="coffee.html" class="btn btn-primary">View Coffee Division →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIG DIVISION -->
+  <section class="division-block" id="pig">
+    <div class="division-layout reverse">
+      <div class="division-side">
+        <div class="division-visual pig">
+          🐷
+          <span>Pig Production</span>
+        </div>
+      </div>
+      <div class="division-main">
+        <div class="division-meta">
+          <span class="badge">Division 02</span>
+          <span class="badge accent">Livestock</span>
+        </div>
+        <h2>Pig Farming</h2>
+        <p class="lead">Modern, welfare-oriented pig production covering breeding, farrowing, weaning, and finishing under strict biosecurity and nutrition protocols.</p>
+        <p>We operate closed-herd systems with performance-oriented genetics. Housing is climate-controlled with enrichment features to support natural behaviour. Feed formulations are adjusted by growth stage to optimise feed conversion while meeting nutritional requirements for health and carcass quality.</p>
+        <p>Veterinary oversight includes scheduled vaccination, health monitoring, and rapid response protocols. Manure is managed as a nutrient resource and integrated into our broader farm nutrient cycles where practical, reducing external fertiliser demand.</p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Breeding &amp; Genetics</h4>
+            <p>Closed-herd breeding with selection for growth rate, feed efficiency, and maternal traits.</p>
+          </div>
+          <div class="info-card">
+            <h4>Housing Systems</h4>
+            <p>Climate-controlled units with ventilation, enrichment, and space allowances aligned to welfare standards.</p>
+          </div>
+          <div class="info-card">
+            <h4>Nutrition</h4>
+            <p>Stage-specific rations; continuous monitoring of intake and growth performance.</p>
+          </div>
+          <div class="info-card">
+            <h4>Health &amp; Biosecurity</h4>
+            <p>Controlled access, vaccination schedules, and veterinary protocols to minimise disease risk.</p>
+          </div>
+        </div>
+
+        <ul class="feature-list">
+          <li>Performance recording from farrowing through finish</li>
+          <li>Strict entry and hygiene protocols for staff and visitors</li>
+          <li>Manure handling designed for nutrient recovery</li>
+          <li>Regular welfare assessments and environmental enrichment</li>
+          <li>Traceable batches from birth to dispatch</li>
+        </ul>
+
+        <div class="standards-row">
+          <span class="standard-tag">Biosecurity</span>
+          <span class="standard-tag">Animal Welfare</span>
+          <span class="standard-tag">Feed Efficiency</span>
+          <span class="standard-tag">Batch Traceability</span>
+        </div>
+
+        <div class="division-cta">
+          <a href="pig.html" class="btn btn-primary">View Pig Division →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FISHERY DIVISION -->
+  <section class="division-block" id="fishery">
+    <div class="division-layout">
+      <div class="division-side">
+        <div class="division-visual fishery">
+          🐟
+          <span>Aquaculture</span>
+        </div>
+      </div>
+      <div class="division-main">
+        <div class="division-meta">
+          <span class="badge">Division 03</span>
+          <span class="badge accent">Aquaculture</span>
+        </div>
+        <h2>Fishery Farming</h2>
+        <p class="lead">Sustainable freshwater aquaculture producing high-quality fish through managed ponds and, where appropriate, recirculating systems with continuous water-quality oversight.</p>
+        <p>Species selection is matched to local climate and market demand. Stocking densities are managed to maintain water quality and fish health. Feed is formulated for efficient conversion and reduced environmental loading. Regular sampling of dissolved oxygen, pH, temperature, and ammonia guides daily management decisions.</p>
+        <p>Harvest is planned to deliver fish at optimal size and condition. Cold-chain handling from pond to packing preserves freshness and supports food-safety standards for buyers in retail and food-service channels.</p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Production Systems</h4>
+            <p>Earthen ponds and selected recirculating aquaculture units suited to species and scale.</p>
+          </div>
+          <div class="info-card">
+            <h4>Water Management</h4>
+            <p>Continuous monitoring of key parameters; aeration and exchange protocols to protect stock health.</p>
+          </div>
+          <div class="info-card">
+            <h4>Feeding &amp; Growth</h4>
+            <p>Formulated feeds, feeding schedules, and growth tracking to optimise conversion and size uniformity.</p>
+          </div>
+          <div class="info-card">
+            <h4>Harvest &amp; Handling</h4>
+            <p>Planned harvest windows, careful crowding and transport, and rapid chilling for quality retention.</p>
+          </div>
+        </div>
+
+        <ul class="feature-list">
+          <li>Species adapted to regional conditions and market preferences</li>
+          <li>Disease prevention through water quality and biosecurity</li>
+          <li>Feed optimisation to limit nutrient discharge</li>
+          <li>Record-keeping from stocking to harvest lot</li>
+          <li>Support for cold-chain logistics to market</li>
+        </ul>
+
+        <div class="standards-row">
+          <span class="standard-tag">Water Quality</span>
+          <span class="standard-tag">Sustainable Stocking</span>
+          <span class="standard-tag">Feed Conversion</span>
+          <span class="standard-tag">Cold-Chain Ready</span>
+        </div>
+
+        <div class="division-cta">
+          <a href="fishery.html" class="btn btn-primary">View Fishery Division →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHICKEN DIVISION -->
+  <section class="division-block" id="chicken">
+    <div class="division-layout reverse">
+      <div class="division-side">
+        <div class="division-visual chicken">
+          🐔
+          <span>Poultry Systems</span>
+        </div>
+      </div>
+      <div class="division-main">
+        <div class="division-meta">
+          <span class="badge">Division 04</span>
+          <span class="badge accent">Poultry</span>
+        </div>
+        <h2>Chicken Farming</h2>
+        <p class="lead">Integrated broiler and layer operations focused on bird health, feed efficiency, biosecurity, and consistent supply of poultry meat and table eggs.</p>
+        <p>Housing is designed for effective ventilation, temperature control, and stocking densities that support welfare and performance. Lighting programs and feed formulations are stage-specific. Vaccination schedules and hygiene protocols protect flocks from common poultry diseases.</p>
+        <p>Broiler flocks are managed to target live-weight and uniformity specifications for processors. Layer flocks are managed for egg quality, shell strength, and production persistence. Collection, grading, and packing systems maintain hygiene and product integrity from farm to customer.</p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h4>Broiler Production</h4>
+            <p>Controlled-environment housing, precision feeding, and growth monitoring to meet processor specifications.</p>
+          </div>
+          <div class="info-card">
+            <h4>Layer Production</h4>
+            <p>Commercial layers managed for egg quality, consistent output, and shell integrity.</p>
+          </div>
+          <div class="info-card">
+            <h4>Biosecurity</h4>
+            <p>Restricted access, disinfection routines, and vaccination programs to safeguard flock health.</p>
+          </div>
+          <div class="info-card">
+            <h4>Product Handling</h4>
+            <p>Hygienic collection, grading, and packing for eggs; coordinated dispatch for live birds or processed product.</p>
+          </div>
+        </div>
+
+        <ul class="feature-list">
+          <li>Climate-controlled housing with ventilation management</li>
+          <li>Stage-specific nutrition for growth and laying performance</li>
+          <li>Regular health monitoring and veterinary support</li>
+          <li>Traceable flocks from placement to dispatch</li>
+          <li>Standards aligned with food-safety expectations of buyers</li>
+        </ul>
+
+        <div class="standards-row">
+          <span class="standard-tag">Biosecurity</span>
+          <span class="standard-tag">Bird Welfare</span>
+          <span class="standard-tag">Feed Efficiency</span>
+          <span class="standard-tag">Product Hygiene</span>
+        </div>
+
+        <div class="division-cta">
+          <a href="chicken.html" class="btn btn-primary">View Chicken Division →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARED CAPABILITIES -->
+  <section class="capability">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Across All Divisions</span>
+        <h2>Shared Operating Standards</h2>
+        <p>Every division operates under the same enterprise principles of quality control, environmental responsibility, and transparent supply.</p>
+      </div>
+      <div class="capability-grid">
+        <div class="cap-card">
+          <div class="cap-icon">📋</div>
+          <h3>Full Traceability</h3>
+          <p>Batch and lot records from production unit to dispatch enable verification of origin, handling, and quality data for every product stream.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">🌱</div>
+          <h3>Resource Stewardship</h3>
+          <p>Soil health, water management, manure recycling, and efficient feed use are built into operational planning across land and water systems.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">🔬</div>
+          <h3>Quality &amp; Compliance</h3>
+          <p>Documented procedures, health monitoring, and product-handling standards support food-safety expectations of commercial and export buyers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Discuss Supply or Partnership</h2>
+    <p>Whether you need specialty coffee lots, quality livestock products, or reliable aquaculture and poultry supply — our team is ready to align volumes, specifications, and delivery schedules.</p>
+    <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🌿</div>
+          Verdant Horizon
+        </a>
+        <p>A multi-sector agricultural enterprise committed to sustainable production across coffee, livestock, and aquaculture.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Divisions</h4>
+        <ul>
+          <li><a href="coffee.html">Coffee Farming</a></li>
+          <li><a href="pig.html">Pig Farming</a></li>
+          <li><a href="fishery.html">Fishery Farming</a></li>
+          <li><a href="chicken.html">Chicken Farming</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="division.html">Divisions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@verdanthorizon.farm">hello@verdanthorizon.farm</a></li>
+          <li>+1 (555) 012-3456</li>
+          <li>Agricultural Hub, Region</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Verdant Horizon Farms. All rights reserved.</span>
+      <span>Sustainable Agriculture · Quality Produce</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Header shadow on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
